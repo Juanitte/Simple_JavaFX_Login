@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="282.0" prefWidth="328.0" style="-fx-background-color: #caace5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.HomeController">
+   <Button fx:id="btn_login" alignment="CENTER" layoutX="88.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: #a974d8; -fx-padding: 6;" text="Log in" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_signup" alignment="CENTER" layoutX="184.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: #a974d8; -fx-padding: 6;" text="Sign up" textFill="WHITE" AnchorPane.rightAnchor="89.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Label fx:id="lbl_username" alignment="CENTER" layoutX="14.0" layoutY="119.0" prefHeight="17.0" prefWidth="63.0" text="Username:" textFill="#f2f2f2" AnchorPane.leftAnchor="14.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_password" layoutX="17.0" layoutY="166.0" text="Password:" textFill="#f2f2f2" AnchorPane.leftAnchor="17.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <TextField fx:id="txtfld_username" alignment="CENTER" layoutX="90.0" layoutY="113.0" promptText="user" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="89.0">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <PasswordField fx:id="txtfld_password" alignment="CENTER" layoutX="88.0" layoutY="160.0" promptText="password" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor></PasswordField>
+   <Separator fx:id="separator" layoutY="73.0" prefWidth="200.0" style="-fx-scale-y: 1.5; -fx-background-color: #a974d8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <Rectangle fx:id="shp_header" height="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="328.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <fill>
+         <LinearGradient cycleMethod="REFLECT" endX="0.49763033175355453" endY="0.018957345971563982" startX="0.4881516587677725" startY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.6627451181411743" green="0.45490196347236633" blue="0.8470588326454163" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.7921568751335144" green="0.6745098233222961" blue="0.8980392217636108" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+   <Label fx:id="lbl_title" alignment="CENTER" layoutX="138.0" layoutY="26.0" prefHeight="32.0" prefWidth="52.0" text="APP" textFill="#f2f2f2" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="138.0">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font>
+   </Label>
+   <effect>
+      <Bloom threshold="0.99" />
+   </effect>
+</AnchorPane>
