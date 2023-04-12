@@ -1,8 +1,9 @@
 package com.juanite.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Account {
+public class Account implements Serializable {
 
     private String username;
     private String password;
@@ -12,6 +13,7 @@ public class Account {
     private String country;
     private String city;
     private String bio;
+    private boolean isAdmin;
 
     public Account(){
         this.username = "";
@@ -22,6 +24,7 @@ public class Account {
         this.country = "";
         this.city = "";
         this.bio = "";
+        this.isAdmin = false;
     }
     public Account(String username, String password){
         this.username = username;
@@ -32,8 +35,20 @@ public class Account {
         this.country = "";
         this.city = "";
         this.bio = "";
+        this.isAdmin = false;
     }
-    public Account(String username, String password, String email, String name, String surname, String country, String city, String bio) {
+    public Account(String username, String password, boolean isAdmin){
+        this.username = username;
+        this.password = password;
+        this.email = "";
+        this.name = "";
+        this.surname = "";
+        this.country = "";
+        this.city = "";
+        this.bio = "";
+        this.isAdmin = isAdmin;
+    }
+    public Account(String username, String password, String email, String name, String surname, String country, String city, String bio, boolean isAdmin) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -42,6 +57,7 @@ public class Account {
         this.country = country;
         this.city = city;
         this.bio = bio;
+        this.isAdmin = isAdmin;
     }
 
     public String getUsername() {
@@ -108,6 +124,14 @@ public class Account {
         this.bio = bio;
     }
 
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -120,4 +144,5 @@ public class Account {
     public int hashCode() {
         return Objects.hash(username);
     }
+
 }
