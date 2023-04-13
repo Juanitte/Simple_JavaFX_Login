@@ -31,9 +31,7 @@ public class HomeController {
     @FXML
     public TextField txtfld_password;
     @FXML
-    public Rectangle shp_header;
-    @FXML
-    public Separator separator;
+    public Label lbl_errorMsg;
     private static Account account;
 
     public static void setAccount(Account account) {
@@ -42,7 +40,7 @@ public class HomeController {
 
     @FXML
     private void btnLoginValidate() throws IOException{
-
+        lbl_errorMsg.setVisible(false);
         if(txtfld_username.getText() != null && !Objects.equals(txtfld_username.getText(), "")){
             if(txtfld_password.getText() != null && !Objects.equals(txtfld_password.getText(), "")){
                 account = RepoAccount.getInstance().searchAccount(txtfld_username.getText());
@@ -52,11 +50,12 @@ public class HomeController {
                 }
             }
         }
+        lbl_errorMsg.setVisible(true);
 
     }
     @FXML
     private void btnSignupValidate() throws IOException{
-
+        lbl_errorMsg.setVisible(false);
         if(txtfld_username.getText() != null && Utils.validateUsername(txtfld_username.getText())){
             if(txtfld_password.getText() != null && Utils.validatePassword(txtfld_password.getText())){
                 account = new Account(txtfld_username.getText(), txtfld_password.getText());
@@ -70,7 +69,13 @@ public class HomeController {
                 }
             }
         }
+        lbl_errorMsg.setVisible(true);
 
+    }
+
+    @FXML
+    private void txtfldOnClick() {
+        lbl_errorMsg.setVisible(false);
     }
 
 }

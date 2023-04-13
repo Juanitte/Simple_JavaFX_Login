@@ -10,7 +10,7 @@ import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
-public class UserController {
+public class AdminController {
 
     @FXML
     public Button btn_edit;
@@ -98,7 +98,7 @@ public class UserController {
         txtfld_bio.setText(account.getBio());
     }
     @FXML
-    private void btnEditValidate() {
+    private void btnEditValidate() throws IOException{
         lbl_usernameContent.setVisible(false);
         txtfld_username.setVisible(true);
         lbl_passwordContent.setVisible(false);
@@ -122,11 +122,11 @@ public class UserController {
     }
     @FXML
     private void btnDeleteValidate() throws IOException{
-            App.setRoot("home");
-            RepoAccount.getInstance().removeAccount(account);
+        App.setRoot("home");
+        RepoAccount.getInstance().removeAccount(account);
     }
     @FXML
-    private void btnCancelValidate() {
+    private void btnCancelValidate() throws IOException{
         lbl_usernameContent.setVisible(true);
         txtfld_username.setVisible(false);
         lbl_passwordContent.setVisible(true);
