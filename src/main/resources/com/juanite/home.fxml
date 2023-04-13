@@ -58,7 +58,7 @@
          <Font name="System Bold" size="12.0" />
       </font>
    </Label>
-   <ImageView fitHeight="124.0" fitWidth="131.0" layoutX="102.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fx:id="img_logo" fitHeight="124.0" fitWidth="131.0" layoutX="102.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../logo.png" />
       </image></ImageView>
