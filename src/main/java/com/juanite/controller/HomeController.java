@@ -61,9 +61,11 @@ public class HomeController {
             if(txtfld_password.getText() != null && Utils.validatePassword(txtfld_password.getText())){
                 account = new Account(txtfld_username.getText(), txtfld_password.getText());
                 if(!RepoAccount.getInstance().usedUsername(txtfld_username.getText())) {
-                    if(RepoAccount.getInstance().getAccounts().add(account)) {
-                        UserController.setAccount(account);
-                        App.setRoot("user");
+                    if(RepoAccount.getInstance().getAccounts() != null) {
+                        if (RepoAccount.getInstance().getAccounts().add(account)) {
+                            UserController.setAccount(account);
+                            App.setRoot("user");
+                        }
                     }
                 }
             }

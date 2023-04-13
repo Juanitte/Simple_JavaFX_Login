@@ -78,6 +78,24 @@ public class UserController {
     public static void setAccount(Account account) {
         UserController.account = account;
     }
+    public void initialize(){
+        lbl_usernameContent.setText(account.getUsername());
+        lbl_passwordContent.setText(account.getPassword());
+        lbl_emailContent.setText(account.getEmail());
+        lbl_nameContent.setText(account.getName());
+        lbl_surnameContent.setText(account.getSurname());
+        lbl_countryContent.setText(account.getCountry());
+        lbl_cityContent.setText(account.getCity());
+        lbl_bioContent.setText(account.getBio());
+        txtfld_username.setText(account.getUsername());
+        txtfld_password.setText(account.getPassword());
+        txtfld_email.setText(account.getEmail());
+        txtfld_name.setText(account.getName());
+        txtfld_surname.setText(account.getSurname());
+        txtfld_country.setText(account.getCountry());
+        txtfld_city.setText(account.getCity());
+        txtfld_bio.setText(account.getBio());
+    }
     @FXML
     private void btnEditValidate() throws IOException{
         lbl_usernameContent.setVisible(false);

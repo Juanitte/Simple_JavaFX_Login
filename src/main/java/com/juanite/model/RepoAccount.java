@@ -43,9 +43,11 @@ public class RepoAccount implements Serializable {
     }
 
     public Account searchAccount(String username){
-        for(Account account : _newInstance.getAccounts()){
-            if (account.getUsername().equalsIgnoreCase(username)){
-                return account;
+        if(_newInstance.getAccounts() != null) {
+            for (Account account : _newInstance.getAccounts()) {
+                if (account.getUsername().equalsIgnoreCase(username)) {
+                    return account;
+                }
             }
         }
         return null;
@@ -117,9 +119,13 @@ public class RepoAccount implements Serializable {
     }
 
     public boolean usedUsername(String username){
-        for(Account account : _newInstance.getAccounts()){
-            if (account.getUsername().equalsIgnoreCase(username)){
-                return true;
+        if(_newInstance.getAccounts() != null) {
+            for (Account account : _newInstance.getAccounts()) {
+                if (account != null) {
+                    if (account.getUsername().equalsIgnoreCase(username)) {
+                        return true;
+                    }
+                }
             }
         }
         return false;
