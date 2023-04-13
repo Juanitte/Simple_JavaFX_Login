@@ -2,6 +2,7 @@
 
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -22,7 +23,7 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Label fx:id="lbl_username" alignment="CENTER" layoutX="31.0" layoutY="169.0" prefHeight="30.0" prefWidth="66.0" text="Username:" AnchorPane.leftAnchor="31.0">
+   <Label fx:id="lbl_username" alignment="CENTER" layoutX="31.0" layoutY="185.0" prefHeight="30.0" prefWidth="66.0" text="Username:" AnchorPane.leftAnchor="31.0">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -30,7 +31,7 @@
          <Cursor fx:constant="TEXT" />
       </cursor>
    </Label>
-   <Label fx:id="lbl_password" layoutX="31.0" layoutY="278.0" prefHeight="30.0" prefWidth="66.0" text="Password:" AnchorPane.leftAnchor="31.0">
+   <Label fx:id="lbl_password" layoutX="31.0" layoutY="289.0" prefHeight="30.0" prefWidth="66.0" text="Password:" AnchorPane.leftAnchor="31.0">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -38,18 +39,18 @@
          <Cursor fx:constant="TEXT" />
       </cursor>
    </Label>
-   <TextField fx:id="txtfld_username" alignment="CENTER" layoutX="31.0" layoutY="208.0" prefHeight="30.0" prefWidth="266.0" promptText="user" style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 4; -fx-border-width: 2;" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="31.0">
+   <TextField fx:id="txtfld_username" alignment="CENTER" layoutX="31.0" layoutY="232.0" prefHeight="30.0" prefWidth="266.0" promptText="user" style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 4; -fx-border-width: 2;" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="31.0">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
    </TextField>
-   <PasswordField fx:id="txtfld_password" alignment="CENTER" layoutX="31.0" layoutY="314.0" prefHeight="30.0" prefWidth="266.0" promptText="password" style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 4; -fx-border-width: 2;">
+   <PasswordField fx:id="txtfld_password" alignment="CENTER" layoutX="31.0" layoutY="330.0" prefHeight="30.0" prefWidth="266.0" promptText="password" style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 4; -fx-border-width: 2;">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor></PasswordField>
-   <Label fx:id="lbl_title" alignment="CENTER" layoutX="93.0" layoutY="65.0" prefHeight="60.0" prefWidth="143.0" text="SimpleLogin" textFill="BLUE" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="92.0">
+   <Label fx:id="lbl_title" alignment="CENTER" layoutX="93.0" layoutY="98.0" prefHeight="60.0" prefWidth="143.0" text="SimpleLogin" textFill="BLUE" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="92.0">
       <font>
-         <Font name="System Bold" size="22.0" />
+         <Font name="System Bold" size="20.0" />
       </font>
    </Label>
    <Label fx:id="lbl_errorMsg" layoutX="151.0" layoutY="403.0" text="Label" textFill="RED" visible="false">
@@ -57,4 +58,8 @@
          <Font name="System Bold" size="12.0" />
       </font>
    </Label>
+   <ImageView fitHeight="124.0" fitWidth="131.0" layoutX="102.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../logo.png" />
+      </image></ImageView>
 </AnchorPane>
