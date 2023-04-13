@@ -2,13 +2,14 @@ package com.juanite.controller;
 
 import com.juanite.App;
 import com.juanite.model.Account;
+import com.juanite.model.RepoAccount;
 import com.juanite.util.Utils;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
 
-public class AdminController {
+public class ShowUserController {
 
     @FXML
     public Button btn_edit;
@@ -69,15 +70,19 @@ public class AdminController {
     @FXML
     public Label lbl_bioContent;
     @FXML
-    public Button btn_logout;
+    public Button btn_back;
     @FXML
-    public Button btn_admin;
+    public Button btn_ban;
     @FXML
-    public Button btn_controlPanel;
+    public Button btn_user;
+    @FXML
+    public Label lbl_banned;
+    @FXML
+    public Label lbl_bannedContent;
     public static Account account;
 
     public static void setAccount(Account account) {
-        AdminController.account = account;
+        ShowUserController.account = account;
     }
     public void initialize(){
         lbl_usernameContent.setText(account.getUsername());
@@ -96,6 +101,11 @@ public class AdminController {
         txtfld_country.setText(account.getCountry());
         txtfld_city.setText(account.getCity());
         txtfld_bio.setText(account.getBio());
+        if(account.isBanned()){
+            lbl_bannedContent.setText("Yes");
+        }else{
+            lbl_bannedContent.setText("No");
+        }
     }
     @FXML
     private void btnEditValidate() {
@@ -116,9 +126,16 @@ public class AdminController {
         lbl_bioContent.setVisible(false);
         txtfld_bio.setVisible(true);
         btn_edit.setVisible(false);
-        btn_controlPanel.setVisible(false);
+        btn_delete.setVisible(false);
         btn_submit.setVisible(true);
         btn_cancel.setVisible(true);
+        btn_ban.setVisible(false);
+    }
+    @FXML
+    private void btnDeleteValidate() throws IOException{
+
+        RepoAccount.getInstance().removeAccount(account);
+        App.setRoot("admincontrolpanel");
     }
     @FXML
     private void btnCancelValidate() {
@@ -139,9 +156,10 @@ public class AdminController {
         lbl_bioContent.setVisible(true);
         txtfld_bio.setVisible(false);
         btn_edit.setVisible(true);
-        btn_controlPanel.setVisible(true);
+        btn_delete.setVisible(true);
         btn_submit.setVisible(false);
         btn_cancel.setVisible(false);
+        btn_ban.setVisible(true);
     }
     @FXML
     private void btnSubmitValidate() {
@@ -172,15 +190,18 @@ public class AdminController {
         initialize();
         btnCancelValidate();
     }
-
     @FXML
-    private void btnLogoutValidate() throws IOException{
-        App.setRoot("home");
-    }
-
-    @FXML
-    private void btnControlPanelValidate() throws IOException{
+    private void btnBackValidate() throws IOException{
         App.setRoot("admincontrolpanel");
     }
-
+    @FXML
+    private void btnBanValidate() {
+        if(account.isBanned()){
+            account.setBanned(false);
+        }else{
+            account.setBanned(true);
+        }
+        RepoAccount.getInstance().getAccounts().add(account);
+        initialize();
+    }
 }

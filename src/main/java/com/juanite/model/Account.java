@@ -14,6 +14,7 @@ public class Account implements Serializable {
     private String city;
     private String bio;
     private boolean isAdmin;
+    private boolean isBanned;
 
     public Account(){
         this.username = "";
@@ -25,6 +26,7 @@ public class Account implements Serializable {
         this.city = "";
         this.bio = "";
         this.isAdmin = false;
+        this.isBanned = false;
     }
     public Account(String username, String password){
         this.username = username;
@@ -36,6 +38,7 @@ public class Account implements Serializable {
         this.city = "";
         this.bio = "";
         this.isAdmin = false;
+        this.isBanned = false;
     }
     public Account(String username, String password, boolean isAdmin){
         this.username = username;
@@ -47,8 +50,10 @@ public class Account implements Serializable {
         this.city = "";
         this.bio = "";
         this.isAdmin = isAdmin;
+        this.isBanned = false;
     }
-    public Account(String username, String password, String email, String name, String surname, String country, String city, String bio, boolean isAdmin) {
+
+    public Account(String username, String password, String email, String name, String surname, String country, String city, String bio, boolean isAdmin, boolean isBanned) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -58,6 +63,7 @@ public class Account implements Serializable {
         this.city = city;
         this.bio = bio;
         this.isAdmin = isAdmin;
+        this.isBanned = isBanned;
     }
 
     public String getUsername() {
@@ -130,6 +136,14 @@ public class Account implements Serializable {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public boolean isBanned() {
+        return isBanned;
+    }
+
+    public void setBanned(boolean banned) {
+        isBanned = banned;
     }
 
     @Override

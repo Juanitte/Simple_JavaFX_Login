@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="556.0" prefWidth="328.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.EditUserController">
+   <Button fx:id="btn_edit" alignment="CENTER" layoutX="36.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnEditValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Edit" textFill="WHITE" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_delete" alignment="CENTER" layoutX="229.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnDeleteValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Delete" textFill="WHITE" visible="false" AnchorPane.rightAnchor="36.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_ban" alignment="CENTER" layoutX="119.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnBanValidate" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Ban/Unban" textFill="WHITE" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_back" alignment="CENTER" layoutX="78.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#btnBackValidate" prefHeight="45.0" prefWidth="86.0" style="-fx-background-color: #0000FF; -fx-padding: 6;" text="Back" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_submit" alignment="CENTER" layoutX="58.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnSubmitValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Submit" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_cancel" alignment="CENTER" layoutX="209.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnCancelValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Cancel" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Label fx:id="lbl_username" alignment="CENTER" layoutX="13.0" layoutY="135.0" prefHeight="17.0" prefWidth="63.0" text="Username:" AnchorPane.leftAnchor="13.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_password" alignment="CENTER" layoutX="16.0" layoutY="182.0" text="Password:" AnchorPane.leftAnchor="16.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_email" alignment="CENTER" layoutX="33.0" layoutY="230.0" text="Email:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_name" alignment="CENTER" layoutX="31.0" layoutY="264.0" text="Name:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_surname" alignment="CENTER" layoutX="20.0" layoutY="304.0" text="Surname:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_country" alignment="CENTER" layoutX="22.0" layoutY="339.0" text="Country:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_city" alignment="CENTER" layoutX="47.0" layoutY="378.0" text="City:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_bio" alignment="CENTER" layoutX="49.0" layoutY="414.0" text="Bio:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <TextField fx:id="txtfld_username" alignment="CENTER" layoutX="84.0" layoutY="128.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="user" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="16.0">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <PasswordField fx:id="txtfld_password" alignment="CENTER" layoutX="86.0" layoutY="175.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="password">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor></PasswordField>
+   <TextField fx:id="txtfld_email" alignment="CENTER" layoutX="86.0" layoutY="223.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="email">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField fx:id="txtfld_name" alignment="CENTER" layoutX="86.0" layoutY="257.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="name">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField fx:id="txtfld_surname" alignment="CENTER" layoutX="84.0" layoutY="297.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="surname">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField fx:id="txtfld_country" alignment="CENTER" layoutX="84.0" layoutY="332.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="country">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField fx:id="txtfld_city" alignment="CENTER" layoutX="86.0" layoutY="371.0" prefHeight="29.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1; -fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 4; -fx-border-width: 2;" text="city">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextArea fx:id="txtfld_bio" layoutX="84.0" layoutY="406.0" prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #f1f1f1;" text="bio">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor></TextArea>
+   <Label fx:id="lbl_usernameContent" layoutX="86.0" layoutY="135.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_passwordContent" layoutX="86.0" layoutY="182.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_emailContent" layoutX="86.0" layoutY="230.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_nameContent" layoutX="86.0" layoutY="264.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_surnameContent" layoutX="86.0" layoutY="304.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_countryContent" layoutX="86.0" layoutY="339.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_cityContent" layoutX="86.0" layoutY="378.0" prefHeight="17.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="lbl_bioContent" alignment="TOP_LEFT" layoutX="86.0" layoutY="414.0" prefHeight="75.0" prefWidth="228.0" text="Label" visible="false">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Button fx:id="btn_user" alignment="CENTER" layoutX="164.0" layoutY="44.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="86.0" style="-fx-background-color: #EDEDED; -fx-padding: 6;" text="User">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </Button>
+   <Label fx:id="lbl_banned" alignment="CENTER" layoutX="27.0" layoutY="111.0" text="Banned:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </Label>
+   <Label fx:id="lbl_bannedContent" layoutX="86.0" layoutY="111.0" prefHeight="17.0" prefWidth="228.0" text="Label">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="556.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.AdminControlPanelController">
+   <Button fx:id="btn_edit" alignment="CENTER" layoutX="45.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#btnEditValidate" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Edit" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_show" alignment="CENTER" layoutX="201.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#btnShowValidate" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Show" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_admin" alignment="CENTER" layoutX="50.0" layoutY="14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" style="-fx-background-color: #EDEDED; -fx-padding: 6;" text="Admin Control Panel">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_back" alignment="CENTER" layoutX="115.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#btnBackValidate" prefHeight="45.0" prefWidth="99.0" style="-fx-background-color: #0000FF; -fx-padding: 6;" text="Back" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_ban" alignment="CENTER" layoutX="45.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#btnBanValidate" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Ban/Unban" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_delete" alignment="CENTER" layoutX="201.0" layoutY="512.0" mnemonicParsing="false" onMouseClicked="#btnDeleteValidate" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Delete" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <ListView fx:id="lv_userList" layoutX="21.0" layoutY="124.0" prefHeight="322.0" prefWidth="286.0" style="-fx-background-color: white;">
+      <cursor>
+         <Cursor fx:constant="CROSSHAIR" />
+      </cursor>
+   </ListView>
+</AnchorPane>

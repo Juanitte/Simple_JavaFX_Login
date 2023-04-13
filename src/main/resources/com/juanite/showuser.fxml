@@ -5,8 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="556.0" prefWidth="328.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.UserController">
-   <Button fx:id="btn_edit" alignment="CENTER" layoutX="58.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnEditValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Edit" textFill="WHITE">
+<AnchorPane prefHeight="556.0" prefWidth="328.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.ShowUserController">
+   <Button fx:id="btn_edit" alignment="CENTER" layoutX="36.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnEditValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #008000; -fx-padding: 6;" text="Edit" textFill="WHITE">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -14,9 +14,25 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Button fx:id="btn_delete" alignment="CENTER" layoutX="209.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnDeleteValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="55.80000000000001">
+   <Button fx:id="btn_delete" alignment="CENTER" layoutX="229.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnDeleteValidate" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="36.0">
       <font>
          <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_ban" alignment="CENTER" layoutX="119.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnBanValidate" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-padding: 6;" text="Ban/Unban" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Button fx:id="btn_back" alignment="CENTER" layoutX="78.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#btnBackValidate" prefHeight="45.0" prefWidth="86.0" style="-fx-background-color: #0000FF; -fx-padding: 6;" text="Back" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="22.0" />
       </font>
       <cursor>
          <Cursor fx:constant="HAND" />
@@ -180,7 +196,7 @@
          <Font name="System Bold" size="12.0" />
       </font>
    </Label>
-   <Button fx:id="btn_delete1" alignment="CENTER" layoutX="171.0" layoutY="49.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="86.0" style="-fx-background-color: #EDEDED; -fx-padding: 6;" text="User">
+   <Button fx:id="btn_user" alignment="CENTER" layoutX="164.0" layoutY="44.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="86.0" style="-fx-background-color: #EDEDED; -fx-padding: 6;" text="User">
       <font>
          <Font name="System Bold" size="22.0" />
       </font>
@@ -188,12 +204,17 @@
          <Cursor fx:constant="DEFAULT" />
       </cursor>
    </Button>
-   <Button fx:id="btn_logout" alignment="CENTER" layoutX="72.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#btnLogoutValidate" prefHeight="45.0" prefWidth="99.0" style="-fx-background-color: #0000FF; -fx-padding: 6;" text="Log out" textFill="WHITE">
+   <Label fx:id="lbl_banned" alignment="CENTER" layoutX="27.0" layoutY="111.0" text="Banned:">
       <font>
-         <Font name="System Bold" size="22.0" />
+         <Font name="System Bold" size="12.0" />
       </font>
       <cursor>
-         <Cursor fx:constant="HAND" />
+         <Cursor fx:constant="TEXT" />
       </cursor>
-   </Button>
+   </Label>
+   <Label fx:id="lbl_bannedContent" layoutX="86.0" layoutY="111.0" prefHeight="17.0" prefWidth="228.0" text="Label">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
 </AnchorPane>

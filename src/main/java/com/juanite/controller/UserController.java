@@ -6,7 +6,6 @@ import com.juanite.model.RepoAccount;
 import com.juanite.util.Utils;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
@@ -54,10 +53,6 @@ public class UserController {
     public TextArea txtfld_bio;
     @FXML
     public Separator separator;
-    @FXML
-    public Rectangle shp_header;
-    @FXML
-    public Label lbl_title;
     @FXML
     public Label lbl_usernameContent;
     @FXML
@@ -149,7 +144,7 @@ public class UserController {
         btn_cancel.setVisible(false);
     }
     @FXML
-    private void btnSubmitValidate() throws IOException{
+    private void btnSubmitValidate() {
         if(txtfld_username.getText() != null && !txtfld_username.getText().equalsIgnoreCase("") && !txtfld_username.getText().equalsIgnoreCase(lbl_usernameContent.getText()) && Utils.validateUsername(txtfld_username.getText())){
             account.setUsername(txtfld_username.getText());
         }
@@ -176,5 +171,9 @@ public class UserController {
         }
         initialize();
         btnCancelValidate();
+    }
+    @FXML
+    private void btnLogoutValidate() throws IOException{
+        App.setRoot("home");
     }
 }

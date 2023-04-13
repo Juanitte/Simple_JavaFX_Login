@@ -7,9 +7,7 @@ import com.juanite.util.Utils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
-import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -45,8 +43,15 @@ public class HomeController {
             if(txtfld_password.getText() != null && !Objects.equals(txtfld_password.getText(), "")){
                 account = RepoAccount.getInstance().searchAccount(txtfld_username.getText());
                 if(account != null){
-                    UserController.setAccount(account);
-                    App.setRoot("user");
+                    if(!account.isAdmin()) {
+                        if(!account.isBanned()) {
+                            UserController.setAccount(account);
+                            App.setRoot("user");
+                        }
+                    }else{
+                        AdminController.setAccount(account);
+                        App.setRoot("admin");
+                    }
                 }
             }
         }
