@@ -3,6 +3,7 @@ package com.juanite.controller;
 import com.juanite.App;
 import com.juanite.model.Account;
 import com.juanite.model.RepoAccount;
+import com.juanite.util.Utils;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.shape.Rectangle;
@@ -149,8 +150,31 @@ public class UserController {
     }
     @FXML
     private void btnSubmitValidate() throws IOException{
-        if(txtfld_username.getText() != null && !txtfld_username.getText().equalsIgnoreCase("") && !txtfld_username.getText().equalsIgnoreCase(lbl_usernameContent.getText())){
-
+        if(txtfld_username.getText() != null && !txtfld_username.getText().equalsIgnoreCase("") && !txtfld_username.getText().equalsIgnoreCase(lbl_usernameContent.getText()) && Utils.validateUsername(txtfld_username.getText())){
+            account.setUsername(txtfld_username.getText());
         }
+        if(txtfld_password.getText() != null && !txtfld_password.getText().equalsIgnoreCase("") && !txtfld_password.getText().equalsIgnoreCase(lbl_passwordContent.getText()) && Utils.validatePassword(txtfld_password.getText())){
+            account.setPassword(txtfld_password.getText());
+        }
+        if(txtfld_email.getText() != null && !txtfld_email.getText().equalsIgnoreCase("") && !txtfld_email.getText().equalsIgnoreCase(lbl_emailContent.getText()) && Utils.validateEmail(txtfld_email.getText())){
+            account.setEmail(txtfld_email.getText());
+        }
+        if(txtfld_name.getText() != null && !txtfld_name.getText().equalsIgnoreCase("") && !txtfld_name.getText().equalsIgnoreCase(lbl_nameContent.getText()) && Utils.validateName(txtfld_name.getText())){
+            account.setName(txtfld_name.getText());
+        }
+        if(txtfld_surname.getText() != null && !txtfld_surname.getText().equalsIgnoreCase("") && !txtfld_surname.getText().equalsIgnoreCase(lbl_surnameContent.getText()) && Utils.validateName(txtfld_surname.getText())){
+            account.setSurname(txtfld_surname.getText());
+        }
+        if(txtfld_country.getText() != null && !txtfld_country.getText().equalsIgnoreCase("") && !txtfld_country.getText().equalsIgnoreCase(lbl_countryContent.getText()) && Utils.validateName(txtfld_country.getText())){
+            account.setCountry(txtfld_country.getText());
+        }
+        if(txtfld_city.getText() != null && !txtfld_city.getText().equalsIgnoreCase("") && !txtfld_city.getText().equalsIgnoreCase(lbl_cityContent.getText()) && Utils.validateName(txtfld_city.getText())){
+            account.setCity(txtfld_city.getText());
+        }
+        if(txtfld_bio.getText() != null && !txtfld_bio.getText().equalsIgnoreCase("") && !txtfld_bio.getText().equalsIgnoreCase(lbl_bioContent.getText())){
+            account.setBio(txtfld_bio.getText());
+        }
+        initialize();
+        btnCancelValidate();
     }
 }
