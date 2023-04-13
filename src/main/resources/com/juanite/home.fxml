@@ -5,8 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="556.0" prefWidth="328.0" style="-fx-background-color: #caacgrey ligthe5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.HomeController">
-   <Button fx:id="btn_login" alignment="CENTER" layoutX="31.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#btnLoginValidate" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: blue; -fx-padding: 6;" text="Log in" textFill="WHITE">
+<AnchorPane prefHeight="556.0" prefWidth="328.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanite.controller.HomeController">
+   <Button fx:id="btn_login" alignment="CENTER" layoutX="31.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#btnLoginValidate" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #0000FF; -fx-padding: 6;" text="Log in" textFill="WHITE">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -47,7 +47,7 @@
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor></PasswordField>
-   <Label fx:id="lbl_title" alignment="CENTER" layoutX="93.0" layoutY="65.0" prefHeight="60.0" prefWidth="143.0" text="SimpleLogin" textFill="#1425d9" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="92.0">
+   <Label fx:id="lbl_title" alignment="CENTER" layoutX="93.0" layoutY="65.0" prefHeight="60.0" prefWidth="143.0" text="SimpleLogin" textFill="BLUE" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="92.0">
       <font>
          <Font name="System Bold" size="22.0" />
       </font>
